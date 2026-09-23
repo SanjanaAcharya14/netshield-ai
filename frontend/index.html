@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetShield AI — Real-Time Traffic Guard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🛡️ NetShield AI Dashboard</h1>
+        <div id="status-indicator">
+            Connection: <span id="conn-status">Disconnected</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Live Traffic Flow (Bytes / Packet)</h2>
+            <canvas id="trafficChart"></canvas>
+        </section>
+
+        <section class="card">
+            <h2>Real-Time Anomaly Logs</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Protocol</th>
+                            <th>Source IP</th>
+                            <th>Destination IP</th>
+                            <th>Size</th>
+                            <th>AI Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log-table-body">
+                        <!-- Live network rows will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
